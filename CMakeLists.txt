@@ -35,7 +35,7 @@ include_directories(/include)
 FILE(GLOB_RECURSE CPP_SRC_LIST "src/*.cpp")
 
 cuda_add_executable(stereo_movie main.cpp ${CPP_SRC_LIST})
-target_link_libraries(stereo_movie sgm ${CUDA_LIBRARIES} ${OpenCV_LIBS} pthread)
+target_link_libraries(stereo_movie ${CUDA_LIBRARIES} ${OpenCV_LIBS})
 
 target_link_libraries( stereo_movie /usr/lib/libgxiapi.so)
   
